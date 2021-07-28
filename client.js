@@ -21,11 +21,12 @@ const connect = function () {
   });
 
   conn.on('end', () => {
-    console.log('The host is an asshole. Game over.');
+    console.log('Git gud. Game over');
+    process.exit();
   })
   
 
   return conn;
 };
 
-module.exports = {connect};
+module.exports = { connect };
