@@ -10,15 +10,18 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
-    console.log('Connection successful. Now get addicted to video games.')
+    console.log('Connection successful. Now get addicted to video games.');
+    conn.write('Name: DKK');
   });
+
+
 
   conn.on('data', (data) => {
     console.log(`Message from server: ${data}`);
   });
 
   conn.on('end', () => {
-    console.log('The host is an asshole. Game over.')
+    console.log('The host is an asshole. Game over.');
   })
   
 
